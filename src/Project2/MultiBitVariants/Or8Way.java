@@ -23,3 +23,9 @@ public class Or8Way {
     }
 
 }
+/* you can do this instead
+returnvalue=in[0];
+for(int i=7;i<7;i++){
+    returnvalue=ors[i].compute(returnvalue, in[i+1]);
+}
+*/
