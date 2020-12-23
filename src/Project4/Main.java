@@ -5,14 +5,16 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String path="/Users/Kenton/Desktop/CS/";
 
-        File myfile=new File(path+"file.csv");
-        Parser parser = new Parser(myfile);
-        double data = parser.findAverage();
+        String dir = "Machintosh Data/Users/Kenton/Documents/IB_CompSci/IBCompSciPortfolio-1/src/Project4";
 
-        Writer writer = new Writer(path+"out.csv");
-        writer.writeData(Double.toString(data));
+        File myFile = new File(dir+"unsorted.csv");
+        Parser parser = new Parser(myFile);
+        String[] sortedArray = parser.sortAscending();
+
+        Writer writer = new Writer(dir+"output.csv");
+        writer.writeArrayData(sortedArray);
+
 
     }
 }
